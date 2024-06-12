@@ -1,0 +1,75 @@
+$date
+	Sat Jun 01 09:41:30 2024
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module counter_tb $end
+$var wire 7 ! q [6:0] $end
+$var reg 1 " CLK $end
+$var reg 1 # Reset $end
+$scope module counter_circuit $end
+$var wire 1 " CLK $end
+$var wire 1 # Reset $end
+$var wire 7 $ d_temp [6:0] $end
+$var wire 7 % q [6:0] $end
+$var wire 7 & q_temp [6:0] $end
+$scope module addOne_circuit $end
+$var wire 7 ' O [6:0] $end
+$var wire 7 ( I [6:0] $end
+$upscope $end
+$scope module register_circuit $end
+$var wire 1 " clk $end
+$var wire 7 ) d [6:0] $end
+$var wire 1 # reset $end
+$var reg 7 * q [6:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b0 *
+bz )
+b0 (
+b0x '
+b0 &
+b0x %
+bz $
+1#
+1"
+b0x !
+$end
+#10000
+0"
+#20000
+0#
+0"
+#30000
+bx !
+bx %
+bx '
+bz &
+bz (
+bz *
+1"
+#40000
+0"
+#50000
+1"
+#60000
+0"
+#70000
+1"
+#80000
+0"
+#90000
+1"
+#100000
+0"

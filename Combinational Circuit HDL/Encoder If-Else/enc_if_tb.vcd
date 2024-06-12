@@ -1,0 +1,91 @@
+$date
+	Fri May 31 22:53:54 2024
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module enc_if_tb $end
+$var wire 4 ! A [3:0] $end
+$var reg 4 " Y [3:0] $end
+$scope module uut $end
+$var wire 4 # Y [3:0] $end
+$var reg 2 $ A [1:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+bx $
+bx #
+bx "
+b0xx !
+$end
+#20000
+b0 !
+b0 $
+b0 "
+b0 #
+#40000
+b1 "
+b1 #
+#60000
+b1 !
+b1 $
+b10 "
+b10 #
+#80000
+b0 !
+b0 $
+b11 "
+b11 #
+#100000
+b10 !
+b10 $
+b100 "
+b100 #
+#120000
+b0 !
+b0 $
+b101 "
+b101 #
+#140000
+b110 "
+b110 #
+#160000
+b111 "
+b111 #
+#180000
+b11 !
+b11 $
+b1000 "
+b1000 #
+#200000
+b0 !
+b0 $
+b1001 "
+b1001 #
+#220000
+b1010 "
+b1010 #
+#240000
+b1011 "
+b1011 #
+#260000
+b1100 "
+b1100 #
+#280000
+b1101 "
+b1101 #
+#300000
+b1110 "
+b1110 #
+#320000
+b1111 "
+b1111 #
+#340000

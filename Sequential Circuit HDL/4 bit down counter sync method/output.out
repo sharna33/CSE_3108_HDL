@@ -1,0 +1,112 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_00000215fd9eb690 .scope module, "_4bitDownMeth_tb" "_4bitDownMeth_tb" 2 2;
+ .timescale -9 -12;
+v00000215fda343a0_0 .var "clk", 0 0;
+v00000215fda33ae0_0 .var "en", 0 0;
+v00000215fda34760_0 .net "o", 3 0, L_00000215fd9d6da0;  1 drivers
+v00000215fda33900_0 .var "set", 0 0;
+S_00000215fd9eb820 .scope module, "uut" "_4bitDownMeth" 2 6, 3 1 0, S_00000215fd9eb690;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "clk";
+    .port_info 1 /INPUT 1 "set";
+    .port_info 2 /INPUT 1 "en";
+    .port_info 3 /OUTPUT 4 "o";
+L_00000215fd9d6da0 .functor BUFZ 4, v00000215fd9e79a0_0, C4<0000>, C4<0000>, C4<0000>;
+v00000215fd9b28e0_0 .net "clk", 0 0, v00000215fda343a0_0;  1 drivers
+v00000215fdacc920_0 .net "en", 0 0, v00000215fda33ae0_0;  1 drivers
+v00000215fdacc9c0_0 .net "i_temp", 3 0, L_00000215fda341c0;  1 drivers
+v00000215fdacca60_0 .net "o", 3 0, L_00000215fd9d6da0;  alias, 1 drivers
+v00000215fda34580_0 .net "o_temp", 3 0, v00000215fd9e79a0_0;  1 drivers
+v00000215fda33a40_0 .net "set", 0 0, v00000215fda33900_0;  1 drivers
+S_00000215fd9e7630 .scope module, "uut_dff" "dff" 3 7, 4 1 0, S_00000215fd9eb820;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 1 "clk";
+    .port_info 1 /INPUT 1 "set";
+    .port_info 2 /INPUT 1 "en";
+    .port_info 3 /INPUT 4 "i";
+    .port_info 4 /OUTPUT 4 "o";
+L_00000215fd9d69b0 .functor BUFZ 4, L_00000215fda341c0, C4<0000>, C4<0000>, C4<0000>;
+v00000215fd9b2b50_0 .net "clk", 0 0, v00000215fda343a0_0;  alias, 1 drivers
+v00000215fd9e4820_0 .net "en", 0 0, v00000215fda33ae0_0;  alias, 1 drivers
+v00000215fd9e77c0_0 .net "i", 3 0, L_00000215fda341c0;  alias, 1 drivers
+v00000215fd9e7860_0 .net "o", 3 0, v00000215fd9e79a0_0;  alias, 1 drivers
+v00000215fd9e7900_0 .net "o_next", 3 0, L_00000215fd9d69b0;  1 drivers
+v00000215fd9e79a0_0 .var "o_reg", 3 0;
+v00000215fd9b24d0_0 .net "set", 0 0, v00000215fda33900_0;  alias, 1 drivers
+E_00000215fd9d5710 .event posedge, v00000215fd9b24d0_0, v00000215fd9b2b50_0;
+S_00000215fd9b2570 .scope module, "uut_subOne" "subOne" 3 12, 5 1 0, S_00000215fd9eb820;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 4 "i";
+    .port_info 1 /OUTPUT 4 "o";
+L_00000215fda34828 .functor BUFT 1, C4<0001>, C4<0>, C4<0>, C4<0>;
+v00000215fd9b2700_0 .net/2u *"_ivl_0", 3 0, L_00000215fda34828;  1 drivers
+v00000215fd9b27a0_0 .net "i", 3 0, v00000215fd9e79a0_0;  alias, 1 drivers
+v00000215fd9b2840_0 .net "o", 3 0, L_00000215fda341c0;  alias, 1 drivers
+L_00000215fda341c0 .arith/sub 4, v00000215fd9e79a0_0, L_00000215fda34828;
+    .scope S_00000215fd9e7630;
+T_0 ;
+    %wait E_00000215fd9d5710;
+    %load/vec4 v00000215fd9b24d0_0;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_0.0, 8;
+    %pushi/vec4 15, 0, 4;
+    %assign/vec4 v00000215fd9e79a0_0, 0;
+    %jmp T_0.1;
+T_0.0 ;
+    %load/vec4 v00000215fd9e4820_0;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_0.2, 8;
+    %load/vec4 v00000215fd9e7900_0;
+    %assign/vec4 v00000215fd9e79a0_0, 0;
+T_0.2 ;
+T_0.1 ;
+    %jmp T_0;
+    .thread T_0;
+    .scope S_00000215fd9eb690;
+T_1 ;
+    %load/vec4 v00000215fda343a0_0;
+    %inv;
+    %store/vec4 v00000215fda343a0_0, 0, 1;
+    %delay 5000, 0;
+    %jmp T_1;
+    .thread T_1;
+    .scope S_00000215fd9eb690;
+T_2 ;
+    %vpi_call 2 17 "$dumpfile", "_4bitDownMeth_tb.vcd" {0 0 0};
+    %vpi_call 2 18 "$dumpvars", 32'sb00000000000000000000000000000000, S_00000215fd9eb690 {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %assign/vec4 v00000215fda343a0_0, 0;
+    %pushi/vec4 1, 0, 1;
+    %assign/vec4 v00000215fda33900_0, 0;
+    %pushi/vec4 0, 0, 1;
+    %assign/vec4 v00000215fda33ae0_0, 0;
+    %delay 10000, 0;
+    %pushi/vec4 1, 0, 1;
+    %assign/vec4 v00000215fda33ae0_0, 0;
+    %pushi/vec4 0, 0, 1;
+    %assign/vec4 v00000215fda33900_0, 0;
+    %delay 150000, 0;
+    %vpi_call 2 28 "$finish" {0 0 0};
+    %end;
+    .thread T_2;
+    .scope S_00000215fd9eb690;
+T_3 ;
+    %vpi_call 2 32 "$monitor", $time, " clk=%b, set=%b, en=%b, o=%b", v00000215fda343a0_0, v00000215fda33900_0, v00000215fda33ae0_0, v00000215fda34760_0 {0 0 0};
+    %end;
+    .thread T_3;
+# The file index is used to find the file name in the following table.
+:file_names 6;
+    "N/A";
+    "<interactive>";
+    "_4bitDownMeth_tb.v";
+    "_4bitDownMeth.v";
+    "dff.v";
+    "subOne.v";

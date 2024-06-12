@@ -1,0 +1,113 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_000001ec7e4098d0 .scope module, "operators_tb" "operators_tb" 2 3;
+ .timescale -9 -12;
+v000001ec7e462680_0 .var "A", 3 0;
+v000001ec7e462180_0 .net "Arithmetic", 3 0, L_000001ec7e464bd0;  1 drivers
+v000001ec7e462220_0 .var "B", 3 0;
+v000001ec7e4622c0_0 .net "Bitwise", 3 0, L_000001ec7e40dc00;  1 drivers
+v000001ec7e462360_0 .var "C", 3 0;
+v000001ec7e463af0_0 .net "Concatenation", 3 0, L_000001ec7e4637d0;  1 drivers
+v000001ec7e463910_0 .net "Conditional", 3 0, L_000001ec7e464db0;  1 drivers
+v000001ec7e463e10_0 .var "D", 3 0;
+v000001ec7e464130_0 .net "Equality", 3 0, L_000001ec7e464450;  1 drivers
+v000001ec7e4641d0_0 .net "Logical", 3 0, L_000001ec7e463d70;  1 drivers
+v000001ec7e463c30_0 .net "Reduction", 3 0, L_000001ec7e463690;  1 drivers
+v000001ec7e463cd0_0 .net "Relational", 3 0, L_000001ec7e463050;  1 drivers
+v000001ec7e464310_0 .net "Shift", 3 0, L_000001ec7e463370;  1 drivers
+S_000001ec7e409a60 .scope module, "uut" "operators" 2 8, 3 1 0, S_000001ec7e4098d0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 4 "A";
+    .port_info 1 /INPUT 4 "B";
+    .port_info 2 /INPUT 4 "C";
+    .port_info 3 /INPUT 4 "D";
+    .port_info 4 /OUTPUT 4 "Arithmetic";
+    .port_info 5 /OUTPUT 4 "Shift";
+    .port_info 6 /OUTPUT 4 "Relational";
+    .port_info 7 /OUTPUT 4 "Equality";
+    .port_info 8 /OUTPUT 4 "Bitwise";
+    .port_info 9 /OUTPUT 4 "Reduction";
+    .port_info 10 /OUTPUT 4 "Logical";
+    .port_info 11 /OUTPUT 4 "Concatenation";
+    .port_info 12 /OUTPUT 4 "Conditional";
+L_000001ec7e40dc00 .functor AND 4, v000001ec7e462220_0, v000001ec7e462360_0, C4<1111>, C4<1111>;
+L_000001ec7e40e0d0 .functor OR 1, L_000001ec7e463ff0, L_000001ec7e4630f0, C4<0>, C4<0>;
+v000001ec7e3d2ce0_0 .net "A", 3 0, v000001ec7e462680_0;  1 drivers
+v000001ec7e3d2910_0 .net "Arithmetic", 3 0, L_000001ec7e464bd0;  alias, 1 drivers
+v000001ec7e409bf0_0 .net "B", 3 0, v000001ec7e462220_0;  1 drivers
+v000001ec7e409c90_0 .net "Bitwise", 3 0, L_000001ec7e40dc00;  alias, 1 drivers
+v000001ec7e3ff6a0_0 .net "C", 3 0, v000001ec7e462360_0;  1 drivers
+v000001ec7e3ff740_0 .net "Concatenation", 3 0, L_000001ec7e4637d0;  alias, 1 drivers
+v000001ec7e462040_0 .net "Conditional", 3 0, L_000001ec7e464db0;  alias, 1 drivers
+v000001ec7e462540_0 .net "D", 3 0, v000001ec7e463e10_0;  1 drivers
+v000001ec7e462e00_0 .net "Equality", 3 0, L_000001ec7e464450;  alias, 1 drivers
+v000001ec7e4624a0_0 .net "Logical", 3 0, L_000001ec7e463d70;  alias, 1 drivers
+v000001ec7e462ae0_0 .net "Reduction", 3 0, L_000001ec7e463690;  alias, 1 drivers
+v000001ec7e462900_0 .net "Relational", 3 0, L_000001ec7e463050;  alias, 1 drivers
+v000001ec7e4627c0_0 .net "Shift", 3 0, L_000001ec7e463370;  alias, 1 drivers
+v000001ec7e462cc0_0 .net *"_ivl_10", 0 0, L_000001ec7e464770;  1 drivers
+L_000001ec7e465060 .functor BUFT 1, C4<000>, C4<0>, C4<0>, C4<0>;
+v000001ec7e462c20_0 .net *"_ivl_15", 2 0, L_000001ec7e465060;  1 drivers
+v000001ec7e4625e0_0 .net *"_ivl_19", 0 0, L_000001ec7e464270;  1 drivers
+L_000001ec7e4650a8 .functor BUFT 1, C4<000>, C4<0>, C4<0>, C4<0>;
+v000001ec7e4629a0_0 .net *"_ivl_23", 2 0, L_000001ec7e4650a8;  1 drivers
+v000001ec7e462a40_0 .net *"_ivl_24", 0 0, L_000001ec7e463ff0;  1 drivers
+v000001ec7e462b80_0 .net *"_ivl_26", 0 0, L_000001ec7e4630f0;  1 drivers
+v000001ec7e462400_0 .net *"_ivl_29", 0 0, L_000001ec7e40e0d0;  1 drivers
+L_000001ec7e4650f0 .functor BUFT 1, C4<000>, C4<0>, C4<0>, C4<0>;
+v000001ec7e462d60_0 .net *"_ivl_33", 2 0, L_000001ec7e4650f0;  1 drivers
+v000001ec7e462ea0_0 .net *"_ivl_35", 1 0, L_000001ec7e4646d0;  1 drivers
+v000001ec7e462f40_0 .net *"_ivl_37", 1 0, L_000001ec7e464590;  1 drivers
+v000001ec7e462860_0 .net *"_ivl_4", 0 0, L_000001ec7e464ef0;  1 drivers
+v000001ec7e4620e0_0 .net *"_ivl_40", 0 0, L_000001ec7e463410;  1 drivers
+L_000001ec7e465018 .functor BUFT 1, C4<000>, C4<0>, C4<0>, C4<0>;
+v000001ec7e462720_0 .net *"_ivl_9", 2 0, L_000001ec7e465018;  1 drivers
+L_000001ec7e464bd0 .arith/sum 4, v000001ec7e462220_0, v000001ec7e462360_0;
+L_000001ec7e463370 .shift/r 4, v000001ec7e462220_0, v000001ec7e462360_0;
+L_000001ec7e464ef0 .cmp/gt 4, v000001ec7e462680_0, v000001ec7e462220_0;
+L_000001ec7e463050 .concat [ 1 3 0 0], L_000001ec7e464ef0, L_000001ec7e465018;
+L_000001ec7e464770 .cmp/eq 4, v000001ec7e462680_0, v000001ec7e462220_0;
+L_000001ec7e464450 .concat [ 1 3 0 0], L_000001ec7e464770, L_000001ec7e465060;
+L_000001ec7e464270 .reduce/or v000001ec7e462220_0;
+L_000001ec7e463690 .concat [ 1 3 0 0], L_000001ec7e464270, L_000001ec7e4650a8;
+L_000001ec7e463ff0 .cmp/gt 4, v000001ec7e462680_0, v000001ec7e462220_0;
+L_000001ec7e4630f0 .cmp/gt 4, v000001ec7e462680_0, v000001ec7e463e10_0;
+L_000001ec7e463d70 .concat [ 1 3 0 0], L_000001ec7e40e0d0, L_000001ec7e4650f0;
+L_000001ec7e4646d0 .part v000001ec7e462360_0, 0, 2;
+L_000001ec7e464590 .part v000001ec7e463e10_0, 2, 2;
+L_000001ec7e4637d0 .concat [ 2 2 0 0], L_000001ec7e464590, L_000001ec7e4646d0;
+L_000001ec7e463410 .cmp/gt 4, v000001ec7e462680_0, v000001ec7e462220_0;
+L_000001ec7e464db0 .functor MUXZ 4, v000001ec7e462220_0, v000001ec7e462680_0, L_000001ec7e463410, C4<>;
+    .scope S_000001ec7e4098d0;
+T_0 ;
+    %vpi_call 2 26 "$dumpfile", "operators_tb.vcd" {0 0 0};
+    %vpi_call 2 27 "$dumpvars", 32'sb00000000000000000000000000000000, S_000001ec7e4098d0 {0 0 0};
+    %pushi/vec4 12, 0, 4;
+    %store/vec4 v000001ec7e462680_0, 0, 4;
+    %pushi/vec4 6, 0, 4;
+    %store/vec4 v000001ec7e462220_0, 0, 4;
+    %pushi/vec4 2, 0, 4;
+    %store/vec4 v000001ec7e462360_0, 0, 4;
+    %pushi/vec4 12, 0, 4;
+    %store/vec4 v000001ec7e463e10_0, 0, 4;
+    %delay 20000, 0;
+    %end;
+    .thread T_0;
+    .scope S_000001ec7e4098d0;
+T_1 ;
+    %vpi_call 2 37 "$monitor", "A=%b, B=%b, C=%b, D=%b, Arithmetic=%b, Shift=%b, Relational=%b, Equality=%b, Bitwise=%b, Reduction=%b, Logical=%b, Concatenation=%b, Conditional=%b", v000001ec7e462680_0, v000001ec7e462220_0, v000001ec7e462360_0, v000001ec7e463e10_0, v000001ec7e462180_0, v000001ec7e464310_0, v000001ec7e463cd0_0, v000001ec7e464130_0, v000001ec7e4622c0_0, v000001ec7e463c30_0, v000001ec7e4641d0_0, v000001ec7e463af0_0, v000001ec7e463910_0 {0 0 0};
+    %end;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "operators_tb.v";
+    "operators.v";
